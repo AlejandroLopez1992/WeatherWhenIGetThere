@@ -9,7 +9,7 @@ using WeatherWhenIGetThere.Models;
 
 namespace WeatherWhenIGetThere.Controllers
 {
-    [Route("api/[controller]")]
+    [Route("api/v0/Users")]
     [ApiController]
     public class UsersController : ControllerBase
     {
