@@ -4,15 +4,17 @@ using System.ComponentModel.DataAnnotations.Schema;
 
 namespace WeatherWhenIGetThere.Models
 {
-    public partial class User
+    public class User
     {
-        private static int _nextid = 1;
+        private static int _nextId = 1;
         
         public User()
         {
-            Id = _nextid;
-            _nextid++;
-           
+            if (Id == default)
+            {
+                Id = _nextId;
+                _nextId++;
+            }
         }
 
         public int Id { get; private set; }
